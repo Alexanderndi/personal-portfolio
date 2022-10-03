@@ -3,6 +3,9 @@ import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
+import projImg4 from "../assets/img/project-img4.png";
+import projImg5 from "../assets/img/project-img5.png";
+import projImg6 from "../assets/img/project-img6.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -14,31 +17,37 @@ export const Projects = () => {
       title: "Ecommerce Startup",
       description: "Design & Development",
       imgUrl: projImg1,
+      webUrl: "https://dewolsela.com",
     },
     {
       title: "Fashion Industry Startup",
       description: "Design & Development",
       imgUrl: projImg2,
+      webUrl: "https://aesteshia.com",
     },
     {
-      title: "Auction House Startup",
+      title: "Ecommerce Startup",
       description: "Design & Development",
       imgUrl: projImg3,
+      webUrl: "https://snap-shop.netlify.app",
     },
     {
       title: "Business Startup",
       description: "Design & Development",
-      imgUrl: projImg1,
+      imgUrl: projImg4,
+      webUrl: "https://snap-shop.netlify.app",
     },
     {
       title: "Business Startup",
       description: "Design & Development",
-      imgUrl: projImg2,
+      imgUrl: projImg5,
+      webUrl: "https://dewolsela.com",
     },
     {
       title: "Business Startup",
       description: "PHP & Laravel Development",
-      imgUrl: projImg3,
+      imgUrl: projImg6,
+      webUrl: "https://aesteshia.com",
     },
   ];
 
@@ -51,7 +60,7 @@ export const Projects = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
                 <h2>Projects</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <p>My Services: Develop complete website from scratch/documentation, Installing laravel application, Add new features with an existing application, Fixing bugs from an existing application, Upgrade to the latest version, Integrating the application with external API, API development. My Expertise: Php MySql Vue.js Laravel Laravel WordPress Bootstrap JavaScript jQuery CSS HTML</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
@@ -80,10 +89,10 @@ export const Projects = () => {
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="section">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                      <p>My Services: Develop complete website from scratch/documentation, Installing laravel application, Add new features with an existing application, Fixing bugs from an existing application, Upgrade to the latest version, Integrating the application with external API, API development. My Expertise: Php MySql Vue.js Laravel Laravel WordPress Bootstrap JavaScript jQuery CSS HTML</p>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo.</p>
+                      <p>My Services: Develop complete website from scratch/documentation, Installing laravel application, Add new features with an existing application, Fixing bugs from an existing application, Upgrade to the latest version, Integrating the application with external API, API development. My Expertise: Php MySql Vue.js Laravel Laravel WordPress Bootstrap JavaScript jQuery CSS HTML</p>
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
