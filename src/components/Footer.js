@@ -17,8 +17,8 @@ export const Footer = () => {
           <Col size={12} sm={6} className="text-center text-sm-end">
             <div className="social-icon">
               <a href="https://linkedin.com/in/ndifrekeeduo"><img src={navIcon1} alt="Icon" /></a>
-              <a href="#"><img src={navIcon2} alt="Icon" /></a>
-              <a href="#"><img src={navIcon3} alt="Icon" /></a>
+              <a href="https://web.facebook.com/eduo.ndifreke/"><img src={navIcon2} alt="Icon" /></a>
+              <a href="https://github.com/Alexanderndi"><img src={navIcon3} alt="Icon" /></a>
             </div>
             <p>Copyright 2022. All Rights Reserved</p>
           </Col>

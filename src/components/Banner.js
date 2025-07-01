@@ -9,10 +9,10 @@ export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
-  const [delta, setDelta] = useState(300 - Math.random() * 100);
+  const [delta, setDelta] = useState(100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Fullstack Developer", "Frontend - React Js, Vue Js Developer", "Backend PHP & Laravel Developer" ];
-  const period = 2000;
+  const toRotate = ["Fullstack Developer", "Frontend - React Js Developer", "Backend PHP & Laravel/Symfony Developer", "Backend Java & Spring Boot Developer"];
+  const period = 1000;
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -23,29 +23,27 @@ export const Banner = () => {
   }, [text])
 
   const tick = () => {
-    let i = loopNum % toRotate.length;
-    let fullText = toRotate[i];
-    let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
+  let i = loopNum % toRotate.length;
+  let fullText = toRotate[i];
+  let updatedText = isDeleting
+    ? fullText.substring(0, text.length - 1)
+    : fullText.substring(0, text.length + 1);
 
-    setText(updatedText);
+  setText(updatedText);
 
-    if (isDeleting) {
-      setDelta(prevDelta => prevDelta / 2);
-    }
-
-    if (!isDeleting && updatedText === fullText) {
-      setIsDeleting(true);
-      setIndex(prevIndex => prevIndex - 1);
-      setDelta(period);
-    } else if (isDeleting && updatedText === '') {
-      setIsDeleting(false);
-      setLoopNum(loopNum + 1);
-      setIndex(1);
-      setDelta(500);
-    } else {
-      setIndex(prevIndex => prevIndex + 1);
-    }
+  if (isDeleting) {
+    setDelta(50); // faster deletion
   }
+
+  if (!isDeleting && updatedText === fullText) {
+    setIsDeleting(true);
+    setDelta(period);
+  } else if (isDeleting && updatedText === '') {
+    setIsDeleting(false);
+    setLoopNum(loopNum + 1);
+    setDelta(100);
+  }
+}
 
   return (
     <section className="banner" id="home">
@@ -54,19 +52,22 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Eduo Ndifreke, `} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Fullstack Developer", "Frontend - React Js, Vue Js Developer", "Backend PHP & Laravel Developer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>I am Ndifreke Alexander, a Fullstack Developer with over 3 years' experience in frontend and backend applications development with inherent analytical and communication skills, a developer who pilots quality website and application development across the different aspect of Technology.</p>
-                  <button onClick={() => console.log('#connect')}>Let’s Connect <ArrowRightCircle size={28} /></button>
-              </div>}
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                  <span className="tagline">Welcome to my Portfolio</span>
+                  <h1>{`Hi! I'm Eduo Ndifreke, `} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Fullstack Developer", "Frontend - React Js Developer", "Backend PHP & Laravel/Symfony Developer", "Backend Java & Spring Boot Developer" ]'><span className="wrap">{text}</span></span></h1>
+                  <p>I am Ndifreke Alexander, a Fullstack Developer with over 7 years' experience in frontend and backend applications development with inherent analytical and communication skills, a developer who pilots quality website and application development across the different aspect of Technology.</p>
+                  <button onClick={() => window.location.href = "https://linkedin.com/in/ndifrekealexander"}>
+                    Let’s Connect <ArrowRightCircle size={28} />
+                  </button>
+
+                </div>}
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img"/>
+                  <img src={headerImg} alt="Header Img" />
                 </div>}
             </TrackVisibility>
           </Col>
