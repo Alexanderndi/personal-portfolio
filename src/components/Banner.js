@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.png";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
@@ -10,12 +10,12 @@ export const Banner = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(100);
-  const toRotate = [
+  const toRotate = useMemo(() => [
     "Fullstack Developer",
     "Frontend - React Js Developer",
     "Backend PHP & Laravel/Symfony Developer",
     "Backend Java & Spring Boot Developer"
-  ];
+  ], []);
   const period = 1000;
 
   const tick = useCallback(() => {

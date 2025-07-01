@@ -36,27 +36,27 @@ export const Skills = () => {
                         <p>My Expertise: Php MySql Vue.js Laravel Laravel WordPress Bootstrap JavaScript jQuery CSS HTML.</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={meter1} alt="Fullstack" />
                                 <h5>Fullstack Developer</h5>
                             </div>
                             <div className="item">
-                                <img src={meter2} alt="Image" />
+                                <img src={meter2} alt="Backend" />
                                 <h5>Backend - PHP & Java</h5>
                             </div>
                             <div className="item">
-                                <img src={meter3} alt="Image" />
+                                <img src={meter3} alt="React" />
                                 <h5>React Js</h5>
                             </div>
                             <div className="item">
-                                <img src={meter3} alt="Image" />
+                                <img src={meter3} alt="Java" />
                                 <h5>Java Backend Developer</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={meter1} alt="Html" />
                                 <h5>HTML and CSS</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={meter1} alt="Laravel" />
                                 <h5>Laravel/Symfony Developer</h5>
                             </div>
                         </Carousel>
@@ -64,7 +64,7 @@ export const Skills = () => {
                 </div>
             </div>
         </div>
-        <img className="background-image-left" src={colorSharp} alt="Image" />
+        <img className="background-image-left" src={colorSharp} alt="" />
     </section>
   )
 }
