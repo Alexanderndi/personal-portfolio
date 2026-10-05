@@ -15,8 +15,8 @@ console.log(process.env.EMAIL_PASS);
 const contactEmail = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: "********@gmail.com",
-    pass: ""
+    user: "alex.ndieduo4ict@gmail.com",
+    pass: "nae@2021CTOND"
   },
 });
 
@@ -35,7 +35,7 @@ router.post("/contact", (req, res) => {
   const phone = req.body.phone;
   const mail = {
     from: name,
-    to: "********@gmail.com",
+    to: "alex.ndieduo4ict@gmail.com",
     subject: "Contact Form Submission - Eduo's Portfolio",
     html: `<p>Name: ${name}</p>
            <p>Email: ${email}</p>
